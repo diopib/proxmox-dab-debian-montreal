@@ -27,6 +27,7 @@ all: info/init_ok
 	dab exec echo 'cd' >> ~/.bashrc
 	dab exec git config --global user.name "Dominick Rivard"
 	dab exec git config --global user.email dominick.rivard@gmail.com
+	dab exec apt-get remove -y postfix rpcbind
 	dab finalize
 
 info/init_ok: dab.conf
